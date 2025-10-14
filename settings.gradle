@@ -7,10 +7,11 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         mavenCentral()
         maven { url 'https://maven.neoforged.net/releases' }
+        maven { url 'https://libraries.minecraft.net' }
     }
 }
 

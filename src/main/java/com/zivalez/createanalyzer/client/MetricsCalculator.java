@@ -42,7 +42,7 @@ public class MetricsCalculator {
     );
 
     private static Class<?> KINETIC_BE_CLASS;
-    private static java.lang.reflect.Method M_GET_SPEED;
+    private static Method M_GET_SPEED;
 
     static {
         try {
@@ -73,7 +73,7 @@ public class MetricsCalculator {
             BlockPos p = q.poll();
             if (p.distManhattan(start) > radius) continue;
 
-            BlockState st = level.getBlockState(p);
+            var st = level.getBlockState(p);
             ResourceLocation id = level.registryAccess()
                     .registryOrThrow(net.minecraft.core.registries.Registries.BLOCK)
                     .getKey(st.getBlock());

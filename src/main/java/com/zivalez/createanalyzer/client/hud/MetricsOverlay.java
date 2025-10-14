@@ -20,11 +20,13 @@ public class MetricsOverlay {
         return enabled;
     }
 
-    public static void onClientTick() {
-        if (!enabled || !ClientConfig.CONFIG.overlayEnabled.get()) return;
+    private static void sampleIfNeeded() {
         var mc = Minecraft.getInstance();
-        if (mc == null || mc.level == null || mc.player == null) return;
-
+        if (mc == null || mc.level == null || mc.player == null) {
+            lastStats = null;
+            lastPos = null;
+            return;
+        }
         long now = mc.level.getGameTime();
         if (now - lastSampleGameTime < ClientConfig.CONFIG.sampleIntervalTicks.get()) return;
         lastSampleGameTime = now;
@@ -50,6 +52,8 @@ public class MetricsOverlay {
         if (!enabled || !ClientConfig.CONFIG.overlayEnabled.get()) return;
         var mc = Minecraft.getInstance();
         if (mc == null || mc.font == null) return;
+
+        sampleIfNeeded();
 
         var font = mc.font;
         int sw = mc.getWindow().getGuiScaledWidth();
