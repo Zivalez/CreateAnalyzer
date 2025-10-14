@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+
+[[mods]]
+modId="createanalyzer"
+version="${file.jarVersion}"
+displayName="Create Analyzer (Lite + Config)"
+authors="Zivalez"
+description='''
+Client-only HUD for Create metrics (RPM, stress estimates, nodes) with in-game config screen (Mods > Create Analyzer > Config).
+Minimalist, informative design with theme, scale, and layout options.
+'''
+
+[[dependencies.createanalyzer]]
+modId="neoforge"
+type="required"
+versionRange="[21.0.0,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.createanalyzer]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.createanalyzer]]
+modId="create"
+type="optional"
+versionRange="[0,)"
+ordering="NONE"
+side="CLIENT"

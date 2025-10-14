@@ -1,0 +1,6 @@
+{
+  "key.categories.createanalyzer": "Create Analyzer",
+  "key.createanalyzer.toggle_metrics": "Toggle Kinetic Metrics",
+  "msg.createanalyzer.metrics_on": "Kinetic Metrics NYALA",
+  "msg.createanalyzer.metrics_off": "Kinetic Metrics MATI"
+}
