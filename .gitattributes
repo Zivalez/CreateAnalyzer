@@ -1,7 +1,4 @@
-echo "* text=auto"                                  >  .gitattributes
-echo "*.sh text eol=lf"                             >> .gitattributes
-echo "*.gradle text eol=lf"                         >> .gitattributes
-echo "*.yml text eol=lf"                            >> .gitattributes
-echo "*.bat text eol=crlf"                          >> .gitattributes
-git add .gitattributes
-git commit -m "normalize line endings"
+* text=auto
+gradlew text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
