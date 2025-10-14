@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[4,)"
+loaderVersion="[1,)"
 license="MIT"
 
 [[mods]]
@@ -15,14 +15,14 @@ Minimalist, informative design with theme, scale, and layout options.
 [[dependencies.createanalyzer]]
 modId="neoforge"
 type="required"
-versionRange="[21.0.0,)"
+versionRange="[21,)"   # aman untuk semua 21.x
 ordering="NONE"
 side="CLIENT"
 
 [[dependencies.createanalyzer]]
 modId="minecraft"
 type="required"
-versionRange="[1.21.1,)"
+versionRange="[1.21.1,1.22)"
 ordering="NONE"
 side="CLIENT"
 
