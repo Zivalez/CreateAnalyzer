@@ -1,0 +1,33 @@
+name: Generate Gradle Wrapper
+on:
+  workflow_dispatch: {}   # jalankan manual dari tab Actions
+
+jobs:
+  gen-wrapper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17 (runtime Gradle)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Gradle 8.13
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.13'
+
+      - name: Generate wrapper files
+        run: gradle wrapper --gradle-version 8.13
+
+      - name: Upload wrapper as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: gradle-wrapper
+          path: |
+            gradlew
+            gradlew.bat
+            gradle/wrapper/gradle-wrapper.jar
+            gradle/wrapper/gradle-wrapper.properties
