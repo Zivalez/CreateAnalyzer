@@ -1,0 +1,30 @@
+# === Gradle caches & outputs ===
+.gradle/
+build/
+out/
+
+# Penting: JANGAN ignore 'gradle/' (tanpa titik) karena di situ ada wrapper.
+# (Kita hanya meng-ignore '.gradle/', yang pakai titik.)
+# Pastikan wrapper tetap ikut ke repo:
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# === Dev runtime (NeoForge/Forge) ===
+run/
+logs/
+crash-reports/
+
+# === IDE files ===
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# === OS junk ===
+.DS_Store
+Thumbs.db
+
+# === Misc ===
+*.log
+*.tmp
